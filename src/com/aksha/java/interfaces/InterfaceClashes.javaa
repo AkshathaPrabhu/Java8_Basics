@@ -1,0 +1,24 @@
+package com.aksha.java.interfaces;
+
+
+public class InterfaceClashes {
+}
+
+interface FirstInterface{
+    default void hello()
+    {
+
+    }
+}
+
+
+interface SecondInterface{
+    default void hello()
+    {
+
+    }
+}
+
+class Child implements FirstInterface,SecondInterface{
+    //compiler will give an error, and we have to explicitly mention which method to invoke
+}
